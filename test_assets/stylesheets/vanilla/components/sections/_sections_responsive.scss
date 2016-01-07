@@ -1,0 +1,17 @@
+@include breakpoint($mobile-breakpoint) {
+  .section-introduction {
+    @include span(4 of 4 last);
+  }
+}
+
+@include breakpoint($tablet-breakpoint) {
+  .section-introduction {
+    @include span(10 of 10 last);
+  }
+}
+
+@include breakpoint($desktop-breakpoint) {
+  .section-introduction {
+    @include span(8 of 12);
+  }
+}

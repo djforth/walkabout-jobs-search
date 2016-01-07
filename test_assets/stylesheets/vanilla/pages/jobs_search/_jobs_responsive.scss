@@ -1,0 +1,89 @@
+.csscalc .job-tabs {
+  @include breakpoint($mobile-breakpoint) {
+    .tabs li{
+      // border:2px solid red;
+      display: block;
+      a.tab-btn {
+
+        // padding:15px 25px 15px;
+        margin:0;
+        width:calc(100% - 50px);
+      }
+    }
+  }
+
+
+    .job-item{
+      // border:2px solid red;
+      &:after {
+        background: transparent;
+      }
+    }
+}
+
+
+// Comment
+.no-csscalc .jobs-search {
+  @include breakpoint($mobile-breakpoint) {
+    .job-item {
+      @include span(4 of 4 last);
+    }
+  }
+
+  @include breakpoint($tablet-breakpoint) {
+    .job-item{
+      @include span(5 of 10);
+    }
+
+    .job-item:nth-of-type(even){
+      @include span(5 of 10 last);
+    }
+  }
+
+  @include breakpoint($desktop-breakpoint) {
+    .job-item{
+      @include span(6 of 12);
+    }
+
+    .job-item:nth-of-type(even){
+      @include span(6 of 12 last);
+    }
+  }
+}
+
+
+.csscalc.no-flexbox .jobs-search {
+  @include breakpoint($mobile-breakpoint) {
+    .job-item {
+      // margin:10px;
+      width:calc(100% - 40px);
+    }
+  }
+
+  @include breakpoint($tablet-and-desktop-breakpoint) {
+    .job-item{
+      float:left;
+      // margin:10px;
+      width:calc(50% - 40px);
+    }
+  }
+}
+
+.flexbox .jobs-search {
+  .items-list{
+    @include breakpoint($mobile-breakpoint) {
+      flex-flow: column wrap;
+      .job-item {
+        flex: 0 0 calc(100% - 40px);
+      }
+    }
+
+    @include breakpoint($tablet-and-desktop-breakpoint) {
+      flex-flow: row wrap;
+      .job-item{
+        // margin:10px;
+        flex: 0 0 calc(50% - 40px);
+      }
+    }
+  }
+}

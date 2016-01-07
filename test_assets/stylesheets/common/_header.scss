@@ -1,0 +1,14 @@
+
+
+.navbar{
+  border: none;
+  border-radius: 0;
+  background: $header;
+  @include background-image(linear-gradient(lighten($header, 30%) 0, $header 50%, transparent 50%));
+  // background:linear-gradient(to bottom, $header 0%,white 100%);
+  color:white;
+
+  a, .navbar-brand{
+    color:white !important;
+  }
+}

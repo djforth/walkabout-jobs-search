@@ -1,0 +1,27 @@
+body {
+  // layout
+  position: relative;
+  right: 0;
+
+  // styling
+  background: image_url("body.jpg") center center repeat fixed;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.hidden {
+  @include hidden;
+}
+
+.wrap {
+  &.main {
+    // layout
+    box-sizing: border-box;
+    padding: 40px;
+    
+    // styling
+    background-color: $wrap-main-bg;
+  }
+}

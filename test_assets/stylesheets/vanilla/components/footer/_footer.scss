@@ -1,0 +1,68 @@
+footer {
+  &.main {
+    @include clearfix;
+    padding: $base-line-height / 2 + px 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li, ul {
+      @include reset-normalize;
+    }
+
+    small {
+      // layout
+      line-height: 22px;
+
+      // styling
+      color: $footer-small-text;
+      font-family: "Oswald", sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    ul {
+      a {
+        color: $footer-link-text;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+      }
+
+      &.primary {
+        @include clearfix;
+        
+        a {
+          font-size: 1em; /* 16px */
+          font-weight: 400;
+          line-height: $base-line-height / 16 + em; /* 24px / 16px */
+        }
+      }
+
+      &.secondary {
+        a {
+          font-size: 0.813em; /* 13px */
+          font-weight: 300;
+          line-height: $base-line-height / 13 + em; /* 24px / 13px */
+        }
+      }
+    }
+  }
+}
+
+.footer-container {
+  // layout
+  margin-top: $base-line-height / 2 + px;
+
+  // styling
+  background-color: $footer-bg;
+}
+
+.logo-footer {
+  margin-bottom: 5px;
+}

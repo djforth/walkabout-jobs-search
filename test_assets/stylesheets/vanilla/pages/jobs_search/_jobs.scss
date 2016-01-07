@@ -1,0 +1,132 @@
+.job-tabs{
+  .search-body {
+    padding:20px 0;
+    background:image_url('jobs_bg.jpg');
+  }
+
+  .job-item {
+    position: relative;
+    // border:2px solid red;
+
+    &:nth-of-type(odd):after{
+      background:$jobs-divider;
+      width: 1px;
+      content: "";
+      display:block;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  // Filters
+  .search-filter, .form-group {
+    margin:10px;
+    width:85%;
+  }
+
+  .actions {
+    list-style-type: none;
+    display: inline-block;
+    margin:0;
+    padding:0;
+
+    a.button {
+      padding:10px 40px 10px 20px;
+
+      background-color: $jobs-button-bg;
+      color: $jobs-button-txt;
+      text-decoration: none;
+      box-shadow:inset 0px 5px 15px 0px rgba(50, 50, 50, 0.5);
+
+      &:after {
+        // layout
+        content: "";
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        top: 3px;
+
+        // styling
+        background: image_url("arrow.png") 0 0 no-repeat;
+        height: 30px;
+        width: 15px;
+      }
+    }
+  }
+
+  h1, .sub {
+     color: $section-introduction-heading;
+  }
+
+  .sub, .intro{
+    margin:20px;
+  }
+
+  .intro{
+    width:80%;
+  }
+
+  .description{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+
+    li strong{
+      padding-right: 10px;
+    }
+  }
+
+  //Nav
+
+  .tabs {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+
+    li{
+      display: inline;
+
+      a.tab-btn{
+        display: inline-block;
+        padding:15px 25px 15px;
+        margin:0 3px 5px;
+
+        text-decoration: none;
+        color: $jobs-tab-txt;
+        background-color: $jobs-tab-bg;
+
+        &.active {
+          padding:15px 25px 20px;
+          margin:0 3px 0 3px;
+
+          background:image_url('jobs_bg.jpg');
+          color: $jobs-tab-active;
+        }
+      }
+
+      &:first-child {
+        a.tab-btn{
+          margin-left:0;
+        }
+      }
+    }
+  }
+}
+
+
+.flexbox .jobs-search {
+  .items-list{
+    display:flex;
+
+
+    .job-item {
+      padding:20px;
+      flex: 0 0 calc(100% - 40px);
+
+    }
+
+  }
+
+}

@@ -1,0 +1,49 @@
+.secondary-nav {
+  @include reset-normalize;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  a {
+    @include transition(background-color 0.2s ease-in-out);
+    color: $secondary-nav-text;
+    text-decoration: none;
+
+    &:hover, &.active {
+      background-color: darken($cherrywood, 10%);
+    }
+  }
+
+  li {
+    @include reset-normalize;
+
+    &:first-child {
+      a {
+        margin-left: -20px;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+.secondary-nav-container {
+  // layout
+  float: left;
+  position: relative;
+  width: 100%;
+
+  // styling
+  background-color: $secondary-nav-bg;
+
+  #expandVenue {
+    color: $secondary-nav-expand;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  .tip {
+    float: left;
+    margin-right: 10px;
+  }
+}

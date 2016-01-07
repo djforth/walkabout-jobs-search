@@ -1,0 +1,14 @@
+.section-introduction {
+  h1 {
+    @include reset-normalize((
+      margin: 0 0 10px 0
+    )...);
+    color: $section-introduction-heading;
+  }
+
+  p {
+    @include reset-normalize((
+      margin: 0 0 20px 0
+    )...);
+  }
+}

@@ -1,0 +1,83 @@
+// Use this tool to name colours:
+// http://chir.ag/projects/name-that-color
+
+// List the colours out below and then assign these colour variables to other variables to be used throughout the project, ie:
+
+// $gumbo: #7999a7;
+// $heading_text: $gumbo;
+// Greys
+$black: #000;
+$black-t-02: rgba(0, 0, 0, 0.2);
+$thunder: #231f20;
+
+// Reds
+$cherrywood: #631718;
+$falu-red: #821f1a;
+$mexican-red: #af2628;
+$rose-fog: #e7bcbb;
+$tamarillo : #AA1A1E;
+$valencia: #c84027;
+
+// Yellows
+$sun: #fdb813;
+
+//Browns
+$indian-khaki: #C4A987;
+$barley-corn: #9D8556;
+
+// Other
+$white: #fff;
+
+// Global
+$body-text: $thunder !default;
+$wrap-main-bg: $white !default;
+
+// Footer
+$footer-bg: $mexican-red !default;
+$footer-link-text: $white !default;
+$footer-small-text: $white !default;
+
+// Header
+$header-bg: $mexican-red !default;
+
+// Primary navigation
+$primary-nav-bg: $mexican-red !default;
+$primary-nav-bg-hover: darken($mexican-red, 5%) !default;
+$primary-nav-header-text: $white !default;
+$primary-nav-li-bg-hover: $cherrywood !default;
+$primary-nav-li-border: $falu-red !default;
+$primary-nav-shadow: $black !default;
+$primary-nav-text: $rose-fog !default;
+$primary-nav-text-hover: $sun !default;
+
+$primary-nav-dropdown-bg: darken($white, 10%) !default;
+$primary-nav-dropdown-bg-hover: $white !default;
+$primary-nav-header-border: $white !default;
+
+// Search toolbar
+$search-toolbar-bg: $mexican-red !default;
+$search-toolbar-form-bg: $white !default;
+$search-toolbar-shadow: $black-t-02 !default;
+$search-toolbar-text: $white !default;
+
+// Secondary navigation
+$secondary-nav-bg: $mexican-red !default;
+$secondary-nav-bg-hover: $cherrywood !default;
+$secondary-nav-expand: $white !default;
+$secondary-nav-expand-border: $white !default;
+$secondary-nav-text: $white !default;
+
+// Section introduction
+$section-introduction-heading: $mexican-red !default;
+
+// TinyMCE
+$tinymce-heading: $black !default;
+
+// Jobs Search
+$jobs-button-bg  : $tamarillo !default;
+$jobs-button-txt : $white !default;
+$jobs-divider    : $indian-khaki !default;
+$jobs-tab-bg     : $barley-corn !default;
+$jobs-tab-txt    : $white !default;
+$jobs-tab-active : $cherrywood !default;
+

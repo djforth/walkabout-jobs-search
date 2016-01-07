@@ -1,0 +1,40 @@
+@include breakpoint($mobile-breakpoint) {
+  header {
+    &.main {
+      .logo {
+        @include span(2 of 4);
+        // margin-top: 10px;
+      }
+    }
+  }
+}
+
+@include breakpoint($mobile-and-tablet-breakpoint) {
+  header {
+    &.main {
+      @include bleed-x(10px);
+
+      .logo {
+        float: left;
+        margin-right: 2%;
+        width: 43%;
+      }
+    }
+  }
+}
+
+@include breakpoint($tablet-breakpoint) {
+  
+}
+
+@include breakpoint($desktop-breakpoint) {
+  header {
+    &.main {
+      .logo {
+        float: left;
+        margin-right: 2%;
+        width: 24%;
+      }
+    }
+  }
+}

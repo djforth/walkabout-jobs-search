@@ -1,0 +1,25 @@
+{
+  "name": "walkabout-jobs-search",
+  "description": "for walkabout jobs site",
+  "main": "index.js",
+  "authors": [
+    "A Stainforth"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/djforth/walkabout-jobs-search",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "normalize-css": "~3.0.3",
+    "susy": "~2.2.9"
+  }
+}

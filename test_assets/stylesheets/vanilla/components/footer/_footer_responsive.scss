@@ -1,0 +1,76 @@
+@include breakpoint($mobile-breakpoint) {
+  footer {
+    &.main {
+      small {
+        @include span(2 of 4 last);
+      }
+
+      ul {
+        &.primary {
+          @include span(2 of 4);
+        }
+
+        &.secondary {
+          @include span(2 of 4 last);
+        }
+      }
+    }
+  }
+}
+
+// Tablet portrait breakpoint
+@include breakpoint($tablet-breakpoint) {
+  footer {
+    &.main {
+      li {
+        float: left;
+
+        a {
+          // layout
+          margin-right: 10px;
+          padding-right: 10px;
+
+          // styling
+          border-right: 2px solid $white;
+        }
+
+        &:last-child {
+          a {
+            border-right: 0 none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop breakpoint
+@include breakpoint($desktop-breakpoint) {
+  footer {
+    &.main {
+      li {
+        float: left;
+
+        a {
+          // layout
+          margin-right: 10px;
+          padding-right: 10px;
+
+          // styling
+          border-right: 2px solid $white;
+        }
+
+        &:last-child {
+          a {
+            border-right: 0 none;
+          }
+        }
+      }
+
+      small {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+}

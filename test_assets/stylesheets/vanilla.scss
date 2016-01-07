@@ -1,0 +1,30 @@
+@import "normalize.css";
+
+@import "bourbon/app/assets/stylesheets/bourbon";
+
+@import "compass-breakpoint/stylesheets/breakpoint",
+        "susy/sass/susy";
+
+body {
+  @include show-grid(overlay);
+}
+
+// Base and Setup
+@import "vanilla/utils/mixins",
+        "vanilla/base/susy",
+        "vanilla/base/breakpoints",
+        "vanilla/utils/colours",
+        "vanilla/base/typography",
+        "vanilla/base/global",
+        "vanilla/base/forms";
+
+// Components
+@import "vanilla/components/**/*";
+
+// Pages
+@import "vanilla/pages/jobs_search/jobs",
+        "vanilla/pages/jobs_search/jobs_responsive";
+
+.foo {
+  opacity: 0.1;
+}

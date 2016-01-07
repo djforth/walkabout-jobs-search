@@ -1,0 +1,21 @@
+[
+{
+"id": 83,
+"json_title": "Host/Hostess, Temple",
+"visible_from_date": "2015-02-19",
+"visible_until_date": "2016-02-19",
+"summary": "<p>An exciting opportunity awaits you at Walkabout, as part of the Intertain Limited. Become part of a growing chain of leisure venues, recognised across the UK.</p>",
+"start_date": "2015-02-27",
+"average_hours": 14,
+"with_accommodation": false,
+"shift": "Night shifts",
+"head_office_role": false,
+"buttons": {
+"show": "/jobs/83"
+},
+"filters": {
+"venue": 26,
+"job_template": 18
+}
+}
+]

@@ -1,0 +1,44 @@
+@include breakpoint($mobile-breakpoint) {
+
+}
+
+@include breakpoint($mobile-and-tablet-breakpoint) {
+  #expandVenue {
+    // layout
+    display: inline-block;
+    float: right;
+    margin: 4px;
+    padding: 10px;
+
+    // styling
+    border: 1px solid $secondary-nav-expand-border;
+
+    &:hover {
+      background-color: rgba(255,255,255, 0.2)
+    }
+  }
+}
+
+@include breakpoint($tablet-breakpoint) {
+
+}
+
+@include breakpoint($desktop-breakpoint) {
+  #expandVenue {
+    display: none;
+  }
+
+  .secondary-nav {
+    @include span(12 of 12);
+
+    a {
+      float: left;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    li {
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+$info: #d9edf7;
+$success: #dff0d8;
+$warning: #fcf8e3;
+
+img {
+  max-width: 100%;
+}
+
+.buttons {
+  div {
+    float: left;
+  }
+}
+
+.company-selector {
+  label {
+    margin-right: 5px;
+  }
+}
+
+.fake-table {
+  margin-bottom: 20px;
+}
+
+.list-group, .list-group-item, .panel-heading, .tr, .well {
+  @include clearfix;
+}
+
+.panel-heading {
+  .badge {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .panel-title {
+    float: left;
+  }
+}
+
+
+
+.vPad5{
+  padding:5px 0;
+}
+
+.vPad20{
+  padding:20px 0;
+}
+
+.vPad40{
+  padding:40px 0;
+}
+
+.pad20{
+  padding:20px;
+}
+
+.pad40{
+  padding:40px;
+}

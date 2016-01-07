@@ -1,0 +1,15 @@
+.panel {
+  margin: $base-line-height / 2 + px 0;
+  
+  img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+.panel-content {
+  @include clearfix;
+  padding: 20px;
+}
