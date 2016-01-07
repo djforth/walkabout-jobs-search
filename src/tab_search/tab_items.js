@@ -20,6 +20,7 @@ class TabItems extends DataItems {
 
   constructor(props) {
     super(props);
+    this.state = {data:null}
   }
 
   componentDidMount() {
@@ -34,26 +35,19 @@ class TabItems extends DataItems {
   }
 
   renderData(){
+    if(_.isNull(this.state.data)) return "";
 
     if(this.state.data && this.state.data.size > 0){
 
-       let items = this.state.data.map((k)=>{
-         if(k){
-            return (<TabItem {...this.props}
-                data    = {k}
-                key     = {k.get("id")}
-              />);
-         }
-
-         return "";
+      return this.state.data.map((k)=>{
+         return (<TabItem {...this.props}
+            data    = {k}
+            key     = {k.get("id")}
+          />);
       });
-
-      // items = _.reject(items, (i)=>_.isEmpty(i));
-
-      return (items.size === 0) ? "" : items;
     }
 
-    // console.log(this.state.loading)
+
     if(this.state.data.size <= 0){
       return (
         <div className="loader" key="loader">
@@ -61,6 +55,7 @@ class TabItems extends DataItems {
         </div>
       );
     }
+
     return "";
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "walkabout-jobs-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "for walkabout jobs site",
   "main": "index.js",
     "babel": {

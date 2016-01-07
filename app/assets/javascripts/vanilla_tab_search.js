@@ -2462,7 +2462,10 @@ var TabItems = (function (_DataItems) {
   function TabItems(props) {
     _classCallCheck(this, TabItems);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(TabItems).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TabItems).call(this, props));
+
+    _this.state = { data: null };
+    return _this;
   }
 
   _createClass(TabItems, [{
@@ -2483,28 +2486,22 @@ var TabItems = (function (_DataItems) {
     value: function renderData() {
       var _this2 = this;
 
+      if (_.isNull(this.state.data)) return "";
+
       if (this.state.data && this.state.data.size > 0) {
 
-        var items = this.state.data.map(function (k) {
-          if (k) {
-            return React.createElement(TabItem, _extends({}, _this2.props, {
-              data: k,
-              key: k.get("id")
-            }));
-          }
-
-          return "";
+        return this.state.data.map(function (k) {
+          return React.createElement(TabItem, _extends({}, _this2.props, {
+            data: k,
+            key: k.get("id")
+          }));
         });
-
-        // items = _.reject(items, (i)=>_.isEmpty(i));
-
-        return items.size === 0 ? "" : items;
       }
 
-      // console.log(this.state.loading)
       if (this.state.data.size <= 0) {
         return React.createElement("div", { className: "loader", key: "loader" }, React.createElement("h5", null, this.props.noresults));
       }
+
       return "";
     }
   }, {
