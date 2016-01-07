@@ -34,29 +34,33 @@ class TabItems extends DataItems {
     TabsStore.removeChangeListener("tab_change", this._onTabChange);
   }
 
-  renderData(){
-    if(_.isNull(this.state.data)) return "";
-
-    if(this.state.data && this.state.data.size > 0){
-
-      return this.state.data.map((k)=>{
-         return (<TabItem {...this.props}
-            data    = {k}
-            key     = {k.get("id")}
-          />);
-      });
-    }
-
-
-    if(this.state.data.size <= 0){
-      return (
+  renderNoItems(){
+    return (
         <div className="loader" key="loader">
           <h5>{this.props.noresults}</h5>
         </div>
       );
-    }
+  }
 
-    return "";
+  renderItem(item){
+    return (<TabItem {...this.props}
+            data    = {item}
+            key     = {item.get("id")}
+          />);
+  }
+
+  renderData(){
+    let data = this.state.data
+    if(_.isNull(data) || !data) return "";
+
+    if(data.size <= 0) return this.renderNoItems();
+
+    let items = []
+    this.state.data.forEach((k)=>{
+       items.push(this.renderItem(k));
+    });
+
+    return items
   }
 
   _onTabChange(){
